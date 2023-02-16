@@ -9,14 +9,15 @@ public class HlavniProgram {
         Turtle zofka = new Turtle();
 
 
+        NakresliSlunce(zofka);
+        zofka.setLocation(3000,800);
+
         for (int i = 0; i < 5; i++) {
-
-
             NakresliDomecek(zofka, 100 + 200 * i, 300);
         }
 
         NakresliDomecek(zofka, 100, 500);
-        NakresliPrasatko(zofka,500,500);
+        NakresliPrasatko(zofka, 500, 500);
         zofka.turnLeft(20);
         NakresliDomecek(zofka, 900, 500);
     }
@@ -25,7 +26,27 @@ public class HlavniProgram {
         new HlavniProgram().start();
     }
 
-    public void NakresliDomecek(Turtle zofka, int pocatecniX, int pocatecniY){
+    public void NakresliSlunce(Turtle zofka) {
+        zofka.setLocation(300,80);
+        for (int i = 0; i < 20; i++) {
+            zofka.turnLeft(20);
+            zofka.move(10);
+            zofka.turnRight(120);
+            zofka.move(10);
+            zofka.turnLeft(120);
+            zofka.move(10);
+
+
+        }
+
+
+
+
+        zofka.turnRight(40);
+    }
+
+
+    public void NakresliDomecek(Turtle zofka, int pocatecniX, int pocatecniY) {
         zofka.setLocation(pocatecniX, pocatecniY);
         zofka.penUp();
         zofka.move(120);
@@ -43,6 +64,7 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         zofka.move(120);
     }
+
     public void NakresliPrasatko(Turtle zofka, int pocatecniX, int pocatecniY) {
         zofka.setLocation(pocatecniX, pocatecniY);
         zofka.move(90);
