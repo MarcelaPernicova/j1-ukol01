@@ -16,6 +16,8 @@ public class HlavniProgram {
         }
 
         NakresliDomecek(zofka, 100, 500);
+        NakresliPrasatko(zofka,500,500);
+        zofka.turnLeft(20);
         NakresliDomecek(zofka, 900, 500);
     }
 
@@ -43,6 +45,7 @@ public class HlavniProgram {
     }
     public void NakresliPrasatko(Turtle zofka, int pocatecniX, int pocatecniY) {
         zofka.setLocation(pocatecniX, pocatecniY);
+        zofka.move(90);
         zofka.turnLeft(120);
         zofka.move(110);
         zofka.turnLeft(130);
@@ -80,7 +83,7 @@ public class HlavniProgram {
         zofka.penDown();
         zofka.turnRight(120);
         zofka.move(40);
-        zofka.turnLeft(20);
+
 
     }
 }
