@@ -9,7 +9,6 @@ public class HlavniProgram {
         Turtle zofka = new Turtle();
 
 
-
         NakresliSlunce(zofka);
         zofka.setLocation(3000,800);
 
